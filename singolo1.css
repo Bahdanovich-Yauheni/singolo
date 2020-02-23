@@ -1,0 +1,181 @@
+@font-face {
+    font-family: Lato;
+    src: url("..assets\fonts\Lato-Bold.ttf ");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Lato;
+    src: url("..\assets\fonts\Lato-Medium.ttf ");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 26px;
+    letter-spacing: -1.5px;
+}
+a {
+    text-decoration: none;
+}
+html {
+    font-family: Lato, Verdana, serif;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    top: 21px;
+    left: 48px;
+
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 39px;
+    left: 588px;
+    padding-left: 28px;
+    font-size: 12px;
+}
+
+li {
+    padding-right: 23px;
+    padding-left: 7px;
+}
+
+nav a {
+    color: white;
+}
+nav li {
+    color: white;
+}
+
+li:first-child {
+    color: rgb(240, 108, 100);
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.wrapper {
+    width: 1020px;
+}
+
+.header {
+    background-color: rgb(45, 48, 58);
+    height: 89px;
+}
+
+.red-star {
+    color: rgb(240, 108, 100);
+}
+.header__bottom {
+    background-color: rgb(50, 55, 70);
+    height: 6px;
+    width: 1020px;
+    position: absolute;
+    top: 97px;
+}
+
+.slider {
+    height: 600px;
+    width: 1020px;
+    background-color: rgb(240, 108, 100);
+}
+
+.slider__bottom {
+    height: 6px;
+    width: 1020px;
+    background-color: rgb(234, 103, 107)
+}
+
+.iphone-vertical {
+    position: absolute;
+    top: 156px;
+    left: 120px;
+}
+
+.iphone-horizontal {
+    position: absolute;
+    top: 277px;
+    left: 433px;
+}
+
+.left-arrow {
+    position: absolute;
+    top: 384px;
+    left: 50px;
+}
+
+.right-arrow {
+    position: absolute;
+    top: 384px;
+    left: 972px;
+}
+
+
+.our-services h2 {
+    font-weight: 1000;
+    font-size: 29px;
+    position: relative;
+    top: 39px;
+    left: 40px;
+    color: rgb(102, 109, 137);
+    letter-spacing: 0.7px;
+
+}
+
+.our-services p {
+    position: relative;
+    width: 930px;
+    top: 31px;
+    left: 40px;
+    line-height: 31px;
+    padding-bottom: 57px;
+    color: rgb(102, 109, 137);
+}
+
+.container_1, .container_2 {
+    display: flex;
+    width: 958px;
+    height: 122px;
+}
+
+.container_1 .box, 
+.container_2 .box{
+    width: 313px;
+    padding-left: 40px;
+}
+
+.box img {
+    position: relative;
+    left: 1px;
+    top: 3px;
+}
+
+.box h3 {
+    position: relative;
+    left: 80px;
+    top: -83px;
+    letter-spacing: -0.4px;
+    color: rgb(102, 109, 137);
+    
+}
+
+.box p {
+    width: 200px;
+    position: relative;
+    left: 80px;
+    top: -96px;
+    font-size: 12px;
+    line-height: 22px;
+    color: rgb(102, 109, 137);
+}
+
+.navigation a:hover,
+.slider a:hover {
+    background-color: blue;
+}
