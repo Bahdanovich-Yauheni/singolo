@@ -1,0 +1,212 @@
+@font-face {
+    font-family: 'Lato';
+    src: local('Lato Regular'), local('Lato-Regular'), url('latoregular.woff2') format('woff2'), url('latoregular.woff') format('woff'), url('latoregular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: local('Lato Bold'), local('Lato-Bold'), url('latobold.woff2') format('woff2'), url('latobold.woff') format('woff'), url('latobold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: local('Lato Light'), local('Lato-Light'), url('latolight.woff2') format('woff2'), url('latolight.woff') format('woff'), url('latolight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: local('Lato Black'), local('Lato-Black'), url('latoblack.woff2') format('woff2'), url('latoblack.woff') format('woff'), url('latoblack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+.wrapper {
+    width: 1020px;
+    font-family: "Lato", Verdana, serif;
+}
+
+.portfolio {
+    background-color: rgb(045, 048, 058);
+    height: 876px;
+}
+
+.portfolio h2{
+    position: relative;
+    color: rgb(102, 109, 137);
+    top: 75px;
+    left: 40px;
+    margin: 0px;
+    font-size: 30px;
+    letter-spacing: 0.6px;
+}
+
+.portfolio p{
+    margin: 0px;
+    position: relative;
+    color: #767e9e;
+    font-weight: 300;
+    font-size: 18px;
+    top: 96px;
+    left: 40px;
+}
+
+.navigation_portfolio ul{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: 0px;
+    top: 110px;
+    list-style-type: none;
+}
+
+.navigation_portfolio ul:first-child{
+    padding-left: 40px;
+}
+
+.button{
+    height: 22px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: center;
+    background-color: rgba(100, 100, 100, 0);
+    color: #767e9e;
+    border: 1px solid #666d89;
+    margin-right: 10px;
+    padding-left: 6px;
+    padding-right: 6px;
+    letter-spacing: 0px;
+}
+
+.button-checked{
+    color: rgb(197, 197, 197);
+    border: 1px solid #c5c5c5;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.pics{
+    width: 960px;
+    height: 621px;
+    position: relative;
+    top: 128px;
+    left: 40px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.pics a:nth-child(n+13){
+    display: none;
+}
+
+.portfolio_bottom{
+    position: relative;
+    top: 175px;
+    background-color: rgb(50, 55, 70);
+    height: 6px;
+}
+
+.about_us{
+    position: relative;
+    top: -19px;
+    height: 729px;
+    background-color: rgb(242, 242, 242);
+}
+
+.about_us h2{
+    width: 940px;
+    position: relative;
+    top: 70px;
+    left: 40px;
+    font-size: 30px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 900;
+    text-align: left;
+}
+
+.about_us p{
+    position: relative;
+    top: 72px;
+    left: 40px;
+    width: 940px;
+    height: 57px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 300;
+    text-align: left;
+}
+
+.container_about_us{
+    width: 940px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 40px;
+    left: 40px;
+}
+
+.box{
+    position: relative;
+    top: 60px;
+    width: 300px;
+    margin-right: 20px;
+}
+
+.box h3{
+    position: relative;
+    top: -4px;
+    font-size: 18px;
+    line-height: 18px;
+    height: 18px;
+    overflow: hidden;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 900;
+    text-align: left;
+}
+
+.box p{
+    position: relative;
+    top: -13px;
+    left: 0px;
+    width: 300px;
+    height: 44px;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 21px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 400;
+    text-align: left;
+}
+
+.social_networks a{
+    position: relative;
+    top: -3px;
+    left: 1px;
+    margin-right: 4px;
+}
+
+.about_us_bottom{
+    position: relative;
+    top: -20px;
+    height: 6px;
+    background-color: #ffffff;
+}
+
+.button:hover{
+    background-color:rgb(81, 100, 117);
+}
+
+.social_networks a:hover{
+    cursor: help;
+}
