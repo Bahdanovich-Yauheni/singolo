@@ -1,4 +1,4 @@
-font-face {
+@font-face {
     font-family: 'Lato';
     src: local('Lato Regular'), local('Lato-Regular'), url('latoregular.woff2') format('woff2'), url('latoregular.woff') format('woff'), url('latoregular.ttf') format('truetype');
     font-weight: 400;
@@ -76,7 +76,6 @@ a {
 
 .navigation li {
     margin-right: 13.5px;
-    /* padding-left: 7px; */
     list-style: none;
 }
 
@@ -106,10 +105,10 @@ li:first-child {
 }
 .header__bottom {
     background-color: rgb(50, 55, 70);
-    height: 6px;
+    height: 7px;
     width: 1020px;
     position: relative;
-    top: 68.5px;
+    top: 67.5px;
 }
 
 .slider {
