@@ -86,9 +86,8 @@ nav li {
     color: white;
 }
 
-li:first-child {
+.active a {
     color: rgb(240, 108, 100);
-    padding-left: 0px;
 }
 
 .wrapper {
@@ -171,15 +170,69 @@ li:first-child {
     left: -125px;
 }
 
+.black-screen-vertical{
+    position: absolute;
+    top: 117.6px;
+    left: 125.5px;
+    height: 333.6px;
+    width: 189px;
+    z-index: 0;
+    background-color: black;
+    display: block;
+}
+
+.black-screen-horizontal{
+    position: absolute;
+    top: 187px;
+    left: 485px;
+    height: 190px;
+    width: 334.6px;
+    z-index: 0;
+    background-color: black;
+    display: block;
+}
+
+.phone-button-vertical{
+    position: absolute;
+    top: 462px;
+    left: 201px;
+    height: 40px;
+    width: 40px;
+    z-index: 0;
+    background-color: rgba(255, 209, 6, 0);
+    display: block;
+}
+
+.phone-button-horizontal, .phone-button-vertical{
+    cursor: pointer;
+}
+
+.phone-button-horizontal{
+    position: absolute;
+    top: 260px;
+    left: 435px;
+    height: 40px;
+    width: 40px;
+    z-index: 0;
+    background-color: rgba(255, 209, 6, 0);
+    display: block;
+}
+
+.buttons-screens{
+    position: absolute;
+    top: 95px;
+    left: 0px;
+}
+
 .left-arrow {
     position: absolute;
-    top: 281px;
+    top: 376px;
     left: 42px;
 }
 
 .right-arrow {
     position: absolute;
-    top: 281px;
+    top: 376px;
     left: 964px;
 }
 
@@ -253,9 +306,14 @@ li:first-child {
     color: rgb(102, 109, 137);
 }
 
-.navigation a:hover,
-.slider a:hover {
-    background-color: blue;
+.navigation a:hover {
+    color: rgb(240, 108, 100);
+}
+
+
+.left-arrow:hover,
+.right-arrow:hover {
+    cursor: pointer;
 }
 
 .wrapper_portfolio {
@@ -523,8 +581,10 @@ input::placeholder {
     background-color: #d6564f;
     position: relative;
     top: 16px;
+    resize: none;
     left: 0px;
-    width: 615px;
+    width: 617px;
+    height: 200px;
     border-radius: 5px;
     border-color: rgba(0, 0, 0, 0);
 }

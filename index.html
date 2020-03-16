@@ -7,15 +7,15 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">
+      <header class="header" id="home">
         <a href="#" class="logo"><h1>SINGOLO<span class="red-star">*</span></h1></a>
         <nav class="header__navigation">
-            <ul class="navigation">
-                <li class="homepage">HOME</li>
-                <li><a href="#">SERVICES</a></li>
-                <li><a href="#">PORTFOLIO</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">CONTACT</a></li>
+            <ul class="navigation" id="navigation">
+                <li class="active"><a href="#home">HOME</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#about_us">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
         <div class="header__bottom"></div>
@@ -29,14 +29,24 @@
             <img src="assets/iphone-horizontal.png " alt="iphone-horizontal" class="iphone-horizontal">
             <img src="assets/shadow-horizontal.png " alt="shadow-horizontal" class="iphone-horizontal">
             <div class="screen-horizontal"><img src="assets/screen-horizontal.png" alt="screen-horizontal"></div>
-            <a href="#" class="left-arrow"><img src="assets/left-arrow.png" alt="to the left"></a>
-            <a href="#" class="right-arrow"><img src="assets/right-arrow.png" alt="to the right"></a>
-
+            </div>
+            <div class="buttons-screens">
+                <div class="black-screen-vertical black-screen"></div>
+                <div class="phone-button-vertical" onclick="on_off_vert(1)"></div>
+                <div class="black-screen-horizontal black-screen"></div>
+                <div class="phone-button-horizontal" onclick="on_off_hor(1)"></div>
+            </div>
+        <div class="slider">
+            <img src="assets/Slide-2.png" alt="slide#2">
+        </div>
+        <div class="arrows">
+            <a class="left-arrow" onclick="plusSlides(-1)"><img src="assets/left-arrow.png" alt="to the left"></a>
+            <a class="right-arrow" onclick="plusSlides(1)"><img src="assets/right-arrow.png" alt="to the right"></a>
         </div>
         <div class="slider__bottom"></div>
      </div>
     <div class="wrapper">
-        <section class="services">
+        <section class="services" id="services">
             <div class="our-services"><h2>Our Services</h2>
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
             </div>
@@ -81,7 +91,7 @@
         </section>
     </div>
     <div class="wrapper_portfolio">
-        <div class="portfolio">
+        <div class="portfolio" id="portfolio">
            <h2>Portfolio</h2>
            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
            <div class="navigation_portfolio">
@@ -108,7 +118,7 @@
            </div>
            <div class="portfolio_bottom"></div>
         </div>
-        <div class="about_us">
+        <div class="about_us" id="about_us">
             <h2>About Us</h2>
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
             <div class="container_about_us">
@@ -157,13 +167,13 @@
                 <input type="text" required class="form__name" placeholder="Name (Required)">
                 <input type="email" required class="form__email" placeholder="Email (Required)">
                 <input type="text" class="form__subject" placeholder="Subject">
-                <textarea name="textarea" class="form__textarea" cols="83" rows="13" placeholder="Describe your project in detail..."></textarea>
+                <textarea name="textarea" class="form__textarea" placeholder="Describe your project in detail..."></textarea>
                 <input type="submit"  class="form__submit">
             </form>
             <div class="get-a-quote__contact-information">
                 <h3>Contact Information</h3>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                <div class="contact-information__items">
+                <div class="contact-information__items" id="contact">
                     <ul class="contact-information__geo-phone-mail">
                         <li>Elm St. 14/05 Lost City</li>
                         <li><a href="tel:035283318635">03528 331 86 35</a></li>
@@ -188,6 +198,6 @@
     
     
             
-        
+     <script src="script.js"></script>   
   </body>
 </html>
