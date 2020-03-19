@@ -95,26 +95,26 @@
            <h2>Portfolio</h2>
            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
            <div class="navigation_portfolio">
-              <ul>
+              <ul class="tabs" id="tabs">
                 <li><input type="button" value="All" class="button button-checked"></li>
                 <li><input type="button" value="Web Design" class="button"></li>
                 <li><input type="button" value="Graphic Design" class="button"></li>
                 <li><input type="button" value="Artwork" class="button"></li>
               </ul>
            </div>
-           <div class="pics">
-               <a href="#"><img src="assets/1st_pic.png " alt="first pic"></a>
-               <a href="#"><img src="assets/2nd_pic.png " alt="second pic"></a>
-               <a href="#"><img src="assets/3rd_pic.png " alt="third pic"></a>
-               <a href="#"><img src="assets/4th_pic.png " alt="fourth pic"></a>
-               <a href="#"><img src="assets/5th_pic.png " alt="fifth pic"></a>
-               <a href="#"><img src="assets/6th_pic.png " alt="sixth pic"></a>
-               <a href="#"><img src="assets/7th_pic.png " alt="seventh pic"></a>
-               <a href="#"><img src="assets/8th_pic.png " alt="eighth pic"></a>
-               <a href="#"><img src="assets/9th_pic.png " alt="nineth pic"></a>
-               <a href="#"><img src="assets/10th_pic.png " alt="tenth pic"></a>
-               <a href="#"><img src="assets/11th_pic.png " alt="eleventh pic"></a>
-               <a href="#"><img src="assets/12th_pic.png" alt="twelveth pic"></a>
+           <div class="pics" id="pics">
+               <img src="assets/1st_pic.png " alt="first pic" class="portfolio-pic pic-active">
+               <img src="assets/2nd_pic.png " alt="second pic" class="portfolio-pic">
+               <img src="assets/3rd_pic.png " alt="third pic" class="portfolio-pic">
+               <img src="assets/4th_pic.png " alt="fourth pic" class="portfolio-pic">
+               <img src="assets/5th_pic.png " alt="fifth pic" class="portfolio-pic">
+               <img src="assets/6th_pic.png " alt="sixth pic" class="portfolio-pic">
+               <img src="assets/7th_pic.png " alt="seventh pic" class="portfolio-pic">
+               <img src="assets/8th_pic.png " alt="eighth pic" class="portfolio-pic">
+               <img src="assets/9th_pic.png " alt="nineth pic" class="portfolio-pic">
+               <img src="assets/10th_pic.png " alt="tenth pic" class="portfolio-pic">
+               <img src="assets/11th_pic.png " alt="eleventh pic" class="portfolio-pic">
+               <img src="assets/12th_pic.png" alt="twelveth pic" class="portfolio-pic">
            </div>
            <div class="portfolio_bottom"></div>
         </div>
@@ -163,7 +163,7 @@
         <div class="get-a-quote">
             <h2>Get a Quote</h2>
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-            <form class="get-a-quote__form" action="URL" method="POST">
+            <form class="get-a-quote__form" action="URL" method="POST" name="sending_form">
                 <input type="text" required class="form__name" placeholder="Name (Required)">
                 <input type="email" required class="form__email" placeholder="Email (Required)">
                 <input type="text" class="form__subject" placeholder="Subject">
@@ -194,6 +194,17 @@
                 <a href="#"><img src="assets/linkedin_footer.png" alt="Linkedin"></a>
             </div>
         </div>
+    </div>
+    <div id="modalWindow" class="modalWindow display-none">
+        <div class="modalWindow__content">
+            <p class="modalWindow__content-text">Письмо отправлено<br>
+            Тема: <span class="modalWindow__content-subject"></span><br>
+            Описание: <span class="modalWindow__content-description"></span><br>/p>
+            <div class="modalWindow__button">
+                <input type="button" value="OK" class="modalWindow__button-ok">
+            </div>
+        </div>
+        
     </div>
     
     

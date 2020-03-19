@@ -1,27 +1,27 @@
 @font-face {
     font-family: 'Lato';
-    src: local('Lato Regular'), local('Lato-Regular'), url('latoregular.woff2') format('woff2'), url('latoregular.woff') format('woff'), url('latoregular.ttf') format('truetype');
+    src: local('Lato Regular'), local('Lato-Regular'), url('assets/fonts/latoregular.woff2') format('woff2'), url('assets/fonts/latoregular.woff') format('woff'), url('assets/fonts/latoregular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Lato';
-    src: local('Lato Bold'), local('Lato-Bold'), url('latobold.woff2') format('woff2'), url('latobold.woff') format('woff'), url('latobold.ttf') format('truetype');
+    src: local('Lato Bold'), local('Lato-Bold'), url('assets/fonts/latobold.woff2') format('woff2'), url('assets/fonts/latobold.woff') format('woff'), url('assets/fonts/latobold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Lato';
-    src: local('Lato Light'), local('Lato-Light'), url('latolight.woff2') format('woff2'), url('latolight.woff') format('woff'), url('latolight.ttf') format('truetype');
+    src: local('Lato Light'), local('Lato-Light'), url('assets/fonts/latolight.woff2') format('woff2'), url('assets/fonts/latolight.woff') format('woff'), url('assets/fonts/latolight.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Lato';
-    src: local('Lato Black'), local('Lato-Black'), url('latoblack.woff2') format('woff2'), url('latoblack.woff') format('woff'), url('latoblack.ttf') format('truetype');
+    src: local('Lato Black'), local('Lato-Black'), url('assets/fonts/latoblack.woff2') format('woff2'), url('assets/fonts/latoblack.woff') format('woff'), url('assets/fonts/latoblack.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
 }
@@ -112,6 +112,8 @@ nav li {
 
 .slider {
     position: relative;
+    display: flex;
+    overflow: hidden;
     top: 6px;
     height: 594px;
     width: 1020px;
@@ -257,6 +259,7 @@ nav li {
     line-height: 30px;
     margin-bottom: 57px;
     color: rgb(102, 109, 137);
+    text-align: justify;
 }
 
 .container_1, .container_2 {
@@ -304,6 +307,7 @@ nav li {
     font-size: 12px;
     line-height: 22px;
     color: rgb(102, 109, 137);
+    text-align: justify;
 }
 
 .navigation a:hover {
@@ -354,6 +358,7 @@ nav li {
     position: relative;
     margin: 0px;
     top: 96px;
+    width: 290px;
     list-style-type: none;
 }
 
@@ -389,13 +394,28 @@ nav li {
     top: 115px;
     left: 40px;
     display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.pics a:nth-child(n+13){
+.pics img {
+    padding: 5px;
+    height: 187px;
+    width: 220px;
+    cursor: pointer;
+}
+.pics .pic-active {
+    padding: 0px;
+    border: 5px solid #F06C64;
+}
+
+.pics img:nth-child(n+13){
     display: none;
 }
+
+
 
 .portfolio_bottom{
     position: relative;
@@ -464,7 +484,7 @@ nav li {
     color: #666d89;
     font-family: "Lato";
     font-weight: 900;
-    text-align: left;
+    text-align: justify;
 }
 
 .box_about-us p{
@@ -479,7 +499,7 @@ nav li {
     color: #767e9e;
     font-family: "Lato";
     font-weight: 400;
-    text-align: left;
+    text-align: justify;
 }
 
 .social_networks a{
@@ -534,7 +554,7 @@ nav li {
     color: #f0d8d9;
     font-family: "Lato";
     font-weight: 300;
-    text-align: left;
+    text-align: justify;
     position: relative;
     top: 97px;
     left: 40px;
@@ -642,7 +662,7 @@ input::placeholder {
     color: #f0d8d9;
     font-family: "Lato";
     font-weight: 400;
-    text-align: left;
+    text-align: justify;
 }
 
 .contact-information__geo-phone-mail {
@@ -723,3 +743,51 @@ input::placeholder {
 .footer__social_networks a{
     margin: 0px 3.5px 0px 0px;
 }
+
+#modalWindow {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(80, 80, 80, 0.4);
+    z-index: 15;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .display-none {
+    display: none;
+} */
+
+.modalWindow__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    background-color: #f06c64;
+    border-radius: 5px;
+    z-index: 16;
+
+}
+
+.modalWindow__content p{
+    display: block;
+}
+
+.modalWindow__button{
+    display: block;
+}
+
+
+.display-none {
+    display: none;
+}
+
+
+
+
+
