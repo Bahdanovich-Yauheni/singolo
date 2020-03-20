@@ -90,6 +90,7 @@ nav li {
     color: rgb(240, 108, 100);
 }
 
+
 .wrapper {
     width: 1020px;
 }
@@ -97,6 +98,8 @@ nav li {
 .header {
     background-color: rgb(45, 48, 58);
     height: 89px;
+    position: fixed;
+    z-index: 10;
 }
 
 .red-star {
@@ -110,14 +113,30 @@ nav li {
     top: 67.5px;
 }
 
+.wrapper.slides{
+    position: relative;
+    top: 89px;
+    /* margin-top: 89px; */
+}
+
 .slider {
     position: relative;
-    display: flex;
+    display: none;
     overflow: hidden;
     top: 6px;
     height: 594px;
     width: 1020px;
     background-color: rgb(240, 108, 100);
+    animation: 0.5s ease-in-out;
+}
+
+.slider.active,
+.slider.next{
+    display: block;
+}
+
+.next{
+    position: absolute;
 }
 
 .slider__bottom {
@@ -228,14 +247,20 @@ nav li {
 
 .left-arrow {
     position: absolute;
-    top: 376px;
+    top: 50%;
     left: 42px;
 }
 
 .right-arrow {
     position: absolute;
-    top: 376px;
+    top: 50%;
     left: 964px;
+}
+
+.wrapper.services{
+    position: relative;
+    top: 86px;
+    height: 486px;
 }
 
 
@@ -320,7 +345,7 @@ nav li {
     cursor: pointer;
 }
 
-.wrapper_portfolio {
+.wrapper.portfolio {
     position: relative;
     top: 109px;
     width: 1020px;
@@ -524,10 +549,10 @@ nav li {
     cursor: help;
 }
 
-.wrapper__get-a-quote {
+.wrapper.get-a-quote {
     width: 1020px;
     position: relative;
-    top: 115px;
+    top: 849px;
 }
 
 .get-a-quote {
@@ -712,10 +737,17 @@ input::placeholder {
     background-color: #ea676b;
 
 }
+
+.wrapper.footer{
+    position: relative;
+    width: 1020px;
+    top: 855px;
+}
+
 .footer {
     position: relative;
-    top: 115px;
-    width: 1020px;
+    /* top: 115px; */
+    /* width: 1020px; */
     height: 75px;
     background-color: #2d303a;
 }
@@ -757,9 +789,6 @@ input::placeholder {
     justify-content: center;
 }
 
-/* .display-none {
-    display: none;
-} */
 
 .modalWindow__content{
     display: flex;
@@ -786,8 +815,42 @@ input::placeholder {
 .display-none {
     display: none;
 }
-
-
+/* --------------------slider animation------------- */
+.to-left {
+    animation-name: left;
+  }
+  
+  .from-right {
+    animation-name: right;
+  }
+  
+  .to-right {
+    animation-name: right;
+    animation-direction: reverse;
+  }
+  
+  .from-left {
+    animation-name: left;
+    animation-direction: reverse;
+  }
+  
+  @keyframes left {
+    from {
+      left: 0;
+    }
+    to {
+      left: -100%;
+    }
+  }
+  
+  @keyframes right {
+    from {
+      left: 100%;
+    }
+    to {
+      left: 0;
+    }
+  }
 
 
 

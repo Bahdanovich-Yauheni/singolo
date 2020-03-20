@@ -4,22 +4,24 @@ NAVIGATION.addEventListener('click', (event) => {
    event.target.closest('li').classList.add('active');
 })
 
-let slideIndex = 1;
-showCurrentSlide(slideIndex);
+// let slideIndex = 1;
+// showCurrentSlide(slideIndex);
 
-function plusSlides(n){
-    showCurrentSlide(slideIndex += n);
-}
+// function plusSlides(n){
+//     showCurrentSlide(slideIndex += n);
+// }
 
-function showCurrentSlide(n){
-    let i;
-    let slide = document.getElementsByClassName('slider');
-    if (n > slide.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slide.length}
-    for (i = 0; i < slide.length; i++){
-        slide[i].style.display = "none"}
-    slide[slideIndex-1].style.display = "block"
-}
+// function showCurrentSlide(n){
+//     let i;
+//     let slide = document.getElementsByClassName('slider');
+//     if (n > slide.length) {slideIndex = 1}
+//     if (n < 1) {slideIndex = slide.length}
+//     for (i = 0; i < slide.length; i++){
+//         slide[i].style.display = "none"}
+//     slide[slideIndex-1].style.display = "block"
+// }
+
+
 
 const phone_button_horizontal = document.getElementsByClassName('phone-button-horizontal');
 
@@ -93,13 +95,14 @@ function add_pic_border(event){
 document.querySelector('.form__submit').addEventListener('click', showModalWindow);
 
   function showModalWindow(event) {
+    if (document.sending_form.checkValidity()){
     event.preventDefault();
     document.getElementById('modalWindow').style.display = "flex";
     let quoteSubject = document.sending_form.elements[2].value;
     let quoteDescription = document.sending_form.elements[3].value;
     if(quoteSubject == ""){quoteSubject = "Без темы"}
-    if(quoteDescription == ""){quoteSubject = "Без описания"}
-    if (document.sending_form.checkValidity()){
+    if(quoteDescription == ""){quoteDescription = "Без описания"}
+    
         document.querySelector('.modalWindow__content-subject').innerText = quoteSubject;
         document.querySelector('.modalWindow__content-description').innerText = quoteDescription;
     }
@@ -109,10 +112,98 @@ document.querySelector('.form__submit').addEventListener('click', showModalWindo
 
 
     function closeModalWindow(event){
-        console.log(event);
         document.querySelector('form').reset()
         document.getElementById('modalWindow').style.display = "none";
 
     }
+// -------------------slider try 2---------------------------
 
+let items = document.querySelectorAll('.slider');
+let currentItem = 0;
+let isEnabled = true;
+
+function changeCurrentItem(n) {
+	currentItem = (n + items.length) % items.length;
+}
+
+function hideItem(direction) {
+	isEnabled = false;
+	items[currentItem].classList.add(direction);
+	items[currentItem].addEventListener('animationend', function() {
+		this.classList.remove('active', direction);
+	});
+}
+
+function showItem(direction) {
+	items[currentItem].classList.add('next', direction);
+	items[currentItem].addEventListener('animationend', function() {
+		this.classList.remove('next', direction);
+		this.classList.add('active');
+		isEnabled = true;
+	});
+}
+
+function nextItem(n) {
+	hideItem('to-left');
+	changeCurrentItem(n + 1);
+	showItem('from-right');
+}
+
+function previousItem(n) {
+	hideItem('to-right');
+	changeCurrentItem(n - 1);
+	showItem('from-left');
+}
+
+document.querySelector('.left-arrow').addEventListener('click', function() {
+	if (isEnabled) {
+		previousItem(currentItem);
+	}
+});
+
+document.querySelector('.right-arrow').addEventListener('click', function() {
+	if (isEnabled) {
+		nextItem(currentItem);
+	}
+});
+// ----------------------end of slider-------------------
+
+//-----------------------scroll--------------------
+document.addEventListener('scroll', onScroll)
+
+function onScroll(event){
+    let curPos = window.scrollY;
+    console.log(curPos);
+    
+    if (curPos >= 89 && curPos < 686){
+        NAVIGATION.querySelectorAll('li').forEach(el => el.classList.remove('active'));
+        NAVIGATION.querySelectorAll('li')[0].classList.add('active');
+    }
+    if (curPos >= 686 && curPos < 1195){
+        NAVIGATION.querySelectorAll('li').forEach(el => el.classList.remove('active'));
+        NAVIGATION.querySelectorAll('li')[1].classList.add('active');
+    }
+    if (curPos >= 1195 && curPos < 2064){
+        NAVIGATION.querySelectorAll('li').forEach(el => el.classList.remove('active'));
+        NAVIGATION.querySelectorAll('li')[2].classList.add('active')
+    }
+    if (curPos >= 2064 && curPos < 2589){
+        NAVIGATION.querySelectorAll('li').forEach(el => el.classList.remove('active'));
+        NAVIGATION.querySelectorAll('li')[3].classList.add('active')
+    }
+    if (curPos == 2590 ){
+        NAVIGATION.querySelectorAll('li').forEach(el => el.classList.remove('active'));
+        NAVIGATION.querySelectorAll('li')[4].classList.add('active')
+    }
+
+    
+    
+     
+}
+
+// const NAVIGATION = document.getElementById('navigation');
+// NAVIGATION.addEventListener('click', (event) => {
+//    NAVIGATION.querySelectorAll('li').forEach(el => el.classList.remove('active'));
+//    event.target.closest('li').classList.add('active');
+// })
 
