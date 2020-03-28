@@ -32,6 +32,7 @@
 
 html {
     font-family: "Lato", Verdana, serif;
+    scroll-behavior: smooth;
 }
 
 h1 {
@@ -92,14 +93,27 @@ nav li {
 
 
 .wrapper {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
     width: 1020px;
+    /* scroll-margin-top: 95px; */
 }
 
 .header {
     background-color: rgb(45, 48, 58);
     height: 89px;
+    /* left: 0;
+    right: 0; */
+    margin-left: auto;
+    margin-right: auto;
     position: fixed;
+    /* left: 50%;
+    transform: translate(-50%, 0); */
     z-index: 10;
+    width: 1020px;
+
+
 }
 
 .red-star {
@@ -108,7 +122,7 @@ nav li {
 .header__bottom {
     background-color: rgb(50, 55, 70);
     height: 7px;
-    width: 1020px;
+    /* width: 1020px; */
     position: relative;
     top: 67.5px;
 }
@@ -116,7 +130,6 @@ nav li {
 .wrapper.slides{
     position: relative;
     top: 89px;
-    /* margin-top: 89px; */
 }
 
 .slider {
@@ -125,7 +138,7 @@ nav li {
     overflow: hidden;
     top: 6px;
     height: 594px;
-    width: 1020px;
+    /* width: 1020px; */
     background-color: rgb(240, 108, 100);
     animation: 0.5s ease-in-out;
 }
@@ -143,7 +156,7 @@ nav li {
     position: relative;
     top: 6px;
     height: 6px;
-    width: 1020px;
+    /* width: 1020px; */
     background-color: rgb(234, 103, 107)
 }
 
@@ -348,7 +361,7 @@ nav li {
 .wrapper.portfolio {
     position: relative;
     top: 109px;
-    width: 1020px;
+    /* width: 1020px; */
     font-family: "Lato", Verdana, serif;
 }
 
@@ -550,7 +563,7 @@ nav li {
 }
 
 .wrapper.get-a-quote {
-    width: 1020px;
+    /* width: 1020px; */
     position: relative;
     top: 849px;
 }
@@ -731,7 +744,7 @@ input::placeholder {
 } 
 
 .get-a-quote__bottom {
-    width: 1020px;
+    /* width: 1020px; */
     position: relative;
     height: 6px;
     background-color: #ea676b;
@@ -740,7 +753,7 @@ input::placeholder {
 
 .wrapper.footer{
     position: relative;
-    width: 1020px;
+    /* width: 1020px; */
     top: 855px;
 }
 
@@ -851,6 +864,7 @@ input::placeholder {
       left: 0;
     }
   }
+/* ------------end of animation--------------------- */
 
 
 
