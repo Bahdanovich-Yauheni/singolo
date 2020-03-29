@@ -28,6 +28,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 html {
@@ -40,6 +41,7 @@ h1 {
     line-height: 6px;
     letter-spacing: -0.9px;
     font-weight: 700;
+    width: 30%;
 }
 a {
     text-decoration: none;
@@ -54,16 +56,22 @@ a {
     left: 40px;
 
 }
+.header__navigation{
+    text-align: right;
+}
 
 .navigation {
     display: flex;
     flex-direction: row;
-    position: relative;
+    /* position: relative;
     top: 37px;
-    left: 609px;
+    left: 609px; */
     font-size: 12px;
     font-weight: 700;
     letter-spacing: -0.15px;
+    float: right;
+    padding-top: 43px;
+    padding-right: 40px;
 }
 
 .navigation li:not(:first-child):before {
@@ -97,21 +105,17 @@ nav li {
     margin-left: auto;
     margin-right: auto;
     width: 1020px;
-    /* scroll-margin-top: 95px; */
+    scroll-margin-top: 95px;
 }
 
 .header {
     background-color: rgb(45, 48, 58);
     height: 89px;
-    /* left: 0;
-    right: 0; */
     margin-left: auto;
     margin-right: auto;
     position: fixed;
-    /* left: 50%;
-    transform: translate(-50%, 0); */
     z-index: 10;
-    width: 1020px;
+    width: inherit;
 
 
 }
@@ -122,14 +126,15 @@ nav li {
 .header__bottom {
     background-color: rgb(50, 55, 70);
     height: 7px;
-    /* width: 1020px; */
+    width: inherit;
     position: relative;
-    top: 67.5px;
+    top: 82px;
 }
 
 .wrapper.slides{
     position: relative;
     top: 89px;
+    overflow: hidden;
 }
 
 .slider {
@@ -138,7 +143,6 @@ nav li {
     overflow: hidden;
     top: 6px;
     height: 594px;
-    /* width: 1020px; */
     background-color: rgb(240, 108, 100);
     animation: 0.5s ease-in-out;
 }
@@ -162,8 +166,11 @@ nav li {
 
 .iphone-vertical {
     position: absolute;
-    top: 53px;
-    left: 112px;
+    padding-top: 5.2%;
+    padding-left: 10.9%;
+    width: 34.3%;
+    /* top: 53px;
+    left: 112px; */
 }
 
 .screen-vertical {
@@ -184,8 +191,9 @@ nav li {
 
 .iphone-horizontal {
     position: absolute;
-    top: 174px;
-    left: 425px;
+    padding-top: 17.1%;
+    padding-left: 41.7%;
+    width: 88.9%;
 }
 
 .screen-horizontal {
@@ -267,13 +275,13 @@ nav li {
 .right-arrow {
     position: absolute;
     top: 50%;
-    left: 964px;
+    right: 42px;
 }
 
 .wrapper.services{
     position: relative;
     top: 86px;
-    height: 486px;
+    /* height: 486px; */
 }
 
 
@@ -286,7 +294,7 @@ nav li {
     left: 40px;
     color: rgb(102, 109, 137);
     letter-spacing: 0.2px;
-
+    width: fit-content;
 }
 
 .our-services p {
@@ -298,18 +306,21 @@ nav li {
     margin-bottom: 57px;
     color: rgb(102, 109, 137);
     text-align: justify;
+    width: 93%;
 }
 
-.container_1, .container_2 {
-    display: flex;
-    width: 958px;
-    height: 122px;
-    margin: 0px 0px 0px 0px;
+.container{
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-rows: repeat(2, 120px);
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 90%;
+    margin: 0 0 0 2%;
 }
 
-.container_1 .box, 
-.container_2 .box{
-    width: 313px;
+.container .box{
+    width: 100%;
     margin-left: 40px;
 }
 
@@ -333,7 +344,7 @@ nav li {
     top: -57px;
     letter-spacing: -0.4px;
     color: rgb(102, 109, 137);
-    
+    width: fit-content;
 }
 
 
@@ -360,14 +371,15 @@ nav li {
 
 .wrapper.portfolio {
     position: relative;
-    top: 109px;
+    top: 202px;
     /* width: 1020px; */
     font-family: "Lato", Verdana, serif;
+
 }
 
 .portfolio {
     background-color: rgb(045, 048, 058);
-    height: 863px;
+    /* height: 863px; */
 }
 
 .portfolio h2{
@@ -378,6 +390,7 @@ nav li {
     margin: 0px;
     font-size: 30px;
     letter-spacing: 0.6px;
+    width: fit-content;
 }
 
 .portfolio p{
@@ -386,8 +399,10 @@ nav li {
     color: #767e9e;
     font-weight: 300;
     font-size: 18px;
-    top: 83px;
+    /* top: 83px; */
+    padding-top: 83px;
     left: 40px;
+    width: 86%;
 }
 
 .navigation_portfolio ul{
@@ -395,8 +410,9 @@ nav li {
     flex-direction: row;
     position: relative;
     margin: 0px;
-    top: 96px;
-    width: 290px;
+    /* top: 96px; */
+    padding-top: 23px;
+    width: 33%;
     list-style-type: none;
 }
 
@@ -426,22 +442,25 @@ nav li {
 }
 
 .pics{
-    width: 960px;
-    height: 621px;
+    width: 94%;
+    /* height: 621px; */
     position: relative;
-    top: 115px;
-    left: 40px;
+    /* top: 115px; */
+    padding-top: 22px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 60px;
     display: grid;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .pics img {
     padding: 5px;
-    height: 187px;
-    width: 220px;
+    height: auto;
+    width: inherit;
     cursor: pointer;
 }
 .pics .pic-active {
@@ -457,22 +476,28 @@ nav li {
 
 .portfolio_bottom{
     position: relative;
-    top: 162px;
+    top: 6px;
     background-color: rgb(50, 55, 70);
     height: 6px;
 }
 
+.wrapper.about-us{
+    position: relative;
+    top: 202px;
+}
+
 .about_us{
     position: relative;
-    top: 6px;
-    height: 729px;
+    /* top: 89px; */
+    /* height: fit-content; */
     background-color: rgb(242, 242, 242);
 }
 
 .about_us h2{
-    width: 940px;
+    width: 92%;
     position: relative;
-    top: 71px;
+    /* top: 71px; */
+    padding-top: 71px;
     left: 40px;
     font-size: 30px;
     line-height: 18px;
@@ -484,9 +509,10 @@ nav li {
 
 .about_us p{
     position: relative;
-    top: 97px;
+    /* top: 97px; */
+    padding-top: 28px;
     left: 40px;
-    width: 940px;
+    width: 92%;
     height: 57px;
     font-size: 18px;
     line-height: 30px;
@@ -497,19 +523,23 @@ nav li {
 }
 
 .container_about_us{
-    width: 940px;
+    width: 92%;
     display: flex;
     flex-direction: row;
     position: relative;
-    top: 143px;
+    /* top: 143px; */
+    padding-top: 75px;
     left: 40px;
 }
 
 .box_about-us{
     position: relative;
     top: 0px;
-    width: 300px;
+    width: 100%;
     margin-right: 19px;
+}
+.box_about-us>img{
+    width: 100%;
 }
 
 .box_about-us h3{
@@ -527,10 +557,10 @@ nav li {
 
 .box_about-us p{
     position: relative;
-    top: 23px;
+    /* top: 23px; */
     left: 0px;
-    width: 300px;
-    height: 44px;
+    width: 99%;
+    height: 65px;
     overflow: hidden;
     font-size: 12px;
     line-height: 21px;
@@ -539,18 +569,21 @@ nav li {
     font-weight: 400;
     text-align: justify;
 }
+.box_about-us .social_networks{
+    padding: 9% 0% 21% 0%;
+}
 
 .social_networks a{
     position: relative;
-    top: 44px;
+    /* top: 44px; */
     left: 1px;
     margin-right: 4px;
 }
 
 .about_us_bottom{
     position: relative;
-    top: 5px;
-    height: 5px;
+    top: 0px;
+    height: 6px;
     background-color: #ffffff;
 }
 
@@ -565,7 +598,7 @@ nav li {
 .wrapper.get-a-quote {
     /* width: 1020px; */
     position: relative;
-    top: 849px;
+    top: 202px;
 }
 
 .get-a-quote {
@@ -581,12 +614,13 @@ nav li {
     font-weight: 900;
     text-align: left;
     position: relative;
-    top: 71px;
+    padding-top: 71px;
     left: 40px;
+    width: 30%;
 }
 
 .get-a-quote p{
-    width: 940px;
+    width: 94%;
     font-size: 18px;
     line-height: 30px;
     color: #f0d8d9;
@@ -594,20 +628,25 @@ nav li {
     font-weight: 300;
     text-align: justify;
     position: relative;
-    top: 97px;
+    padding-top: 26px;
     left: 40px;
+}
+.form-contact{
+    display: flex;
+    padding-top: 48px;
 }
 
 .get-a-quote__form {
     position: relative;
-    top: 139px;
+    /* top: 139px; */
     left: 40px;
-    width: 620px;
-    height: 380px;
+    width: 180%;
+    height: 400px;
+    margin-right: 60px;
 }
 
 .get-a-quote__form input{
-    width: 615px;
+    width: 100%;
     height: 34px;
     border-radius: 5px;
     border-color: rgba(0, 0, 0, 0);
@@ -641,7 +680,7 @@ input::placeholder {
     top: 16px;
     resize: none;
     left: 0px;
-    width: 617px;
+    width: 100%;
     height: 200px;
     border-radius: 5px;
     border-color: rgba(0, 0, 0, 0);
@@ -659,7 +698,7 @@ input::placeholder {
 }
 
 .get-a-quote__form .form__submit {
-    width: 320px;
+    width: 60.7%;
     height: 34px;
     border-radius: 5px;
     border-color: rgba(89, 76, 212, 0.5);
@@ -672,9 +711,9 @@ input::placeholder {
 
 .get-a-quote__contact-information{
     position: relative;
-    top: -241px;
-    left: 680px;
-    width: 580px;
+    /* top: -241px; */
+    /* left: 680px; */
+    width: 100%;
 }
 
 .get-a-quote__contact-information h3 {
@@ -689,12 +728,13 @@ input::placeholder {
 }
 
 .get-a-quote__contact-information p {
-    width: 300px;
-    height: 82px;
+    width: 88%;
+    /* height: 82px; */
     position: relative;
     top: 0px;
     left: 0px;
-    margin-top: 9.5px;
+    /* margin-top: 9.5px; */
+    padding-top: 5px;
     font-size: 12px;
     line-height: 21.8px;
     color: #f0d8d9;
@@ -709,7 +749,7 @@ input::placeholder {
     position: relative;
     top: 0px;
     left: 0px;
-    width: 300px;
+    width: 100%;
     font-size: 12px;
     line-height: 21.8px;
     color: #f0d8d9;
@@ -754,7 +794,7 @@ input::placeholder {
 .wrapper.footer{
     position: relative;
     /* width: 1020px; */
-    top: 855px;
+    top: 208px;
 }
 
 .footer {
@@ -767,8 +807,10 @@ input::placeholder {
 
 .footer .copyright{
     position: relative;
-    top: 35px;
-    left: 41px;
+    /* top: 35px;
+    left: 41px; */
+    padding-top: 35px;
+    padding-left: 41px;
     font-size: 12px;
     line-height: 6px;
     color: #666d89;
@@ -781,8 +823,11 @@ input::placeholder {
 .footer__social_networks {
     width: 160px;
     position: relative;
-    top: 16px;
-    left: 828px;
+    float: right;
+    margin-right: 30px;
+    bottom: 17px;
+    /* top: 16px;
+    left: 828px; */
 }
 
 .footer__social_networks a{
@@ -866,5 +911,32 @@ input::placeholder {
   }
 /* ------------end of animation--------------------- */
 
+@media (max-width : 1019px) {
+    .wrapper{
+        width: 100vw;
+    }
+
+    .slider{
+        height: calc( 450px + (100vw - 768px));
+    }
+
+    
+.wrapper.services{
+    position: relative;
+    top: 86px;
+}
+
+    .container{
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+    .pics{
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .pics img {
+        width: 100%;
+    }
 
 
+}
